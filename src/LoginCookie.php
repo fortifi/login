@@ -13,12 +13,12 @@ class LoginCookie extends AbstractCookieReader
 
   public function getCustomerFid($default = null)
   {
-    return $this->_property('customerFid', $default);
+    return $this->_property('customer', $default);
   }
 
   public function getUserFid($default = null)
   {
-    return $this->_property('userFid', $default);
+    return $this->_property('user', $default);
   }
 
   public function getUsername($default = null)

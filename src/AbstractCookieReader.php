@@ -35,8 +35,8 @@ abstract class AbstractCookieReader
 
   protected function _property($property, $default = null)
   {
-    return isset($this->_cookie[$property]) ?
-      $this->_cookie[$property] : $default;
+    return isset($this->_cookie->$property) ?
+      $this->_cookie->$property : $default;
   }
 
   public function isPresent()

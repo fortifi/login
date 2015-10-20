@@ -1,0 +1,12 @@
+{
+  "customer": "FID:CST:1444405498:WTacgrPKLH1jN",
+  "user": "FID:AUTH:USER:1438245915:gokEuKg",
+  "username": "john.smith",
+  "displayName": "John Smith",
+  "userType": 1,
+  "token": "0037SCRgGuX0D5CLlAIk5fwg7raV3xF3Sw97sYLr",
+  "refresh": "0XWV6Xdw4EdNAgwZ8srJuLo7lo7Lz4l5qhsM1r7P",
+  "expiry": "1444897254",
+  "authIp": "127.0.0.1",
+  "verify": "md5: ip + token + username + user + expiry + cookie client secret"
+}

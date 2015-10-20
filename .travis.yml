@@ -1,0 +1,15 @@
+language: php
+
+php:
+  - 5.6
+  - 7.0
+  - hhvm
+
+before_script:
+  - bash -c 'if [ $TRAVIS_BRANCH == "master" ]; then composer install --no-interaction --prefer-source -o --no-dev; else composer install --no-interaction --prefer-source -o; fi;'
+
+script:
+ - phpunit -c phpunit.xml.dist
+
+matrix:
+  fast_finish: true

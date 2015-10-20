@@ -1,0 +1,21 @@
+{
+  "name": "fortifi/login",
+  "description": "Fortifi Business Platform",
+  "homepage": "http://fortifi.co",
+  "license": "BSD-3-Clause",
+  "authors": [
+    {
+      "name": "Brooke Bryan",
+      "email": "brooke@bajb.net",
+      "homepage": "http://www.bajb.net"
+    }
+  ],
+  "require": {
+  },
+  "autoload": {
+    "psr-4": {
+      "Fortifi\\Login\\": "src/",
+      "Fortifi\\Tests\\Login": "tests/"
+    }
+  }
+}

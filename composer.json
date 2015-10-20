@@ -15,7 +15,7 @@
   "autoload": {
     "psr-4": {
       "Fortifi\\Login\\": "src/",
-      "Fortifi\\Tests\\Login": "tests/"
+      "Fortifi\\Tests\\Login\\": "tests/"
     }
   }
 }

@@ -1,39 +1,14 @@
 <?php
 namespace Fortifi\Login;
 
-class LoginCookie
+class LoginCookie extends AbstractCookieReader
 {
-  const COOKIE_NAME = 'FRTLGN';
-
-  protected $_cookie;
-
-  public function __construct($cookie = null)
+  /**
+   * @return string
+   */
+  public static function cookieName()
   {
-    if(!empty($cookie))
-    {
-      $this->_cookie = json_decode(base64_decode(rawurldecode($cookie)));
-    }
-  }
-
-  public static function fromGlobals()
-  {
-    $cookie = null;
-    if(isset($_COOKIE[static::COOKIE_NAME]))
-    {
-      $cookie = $_COOKIE[static::COOKIE_NAME];
-    }
-    return new static($cookie);
-  }
-
-  public function isPresent()
-  {
-    return $this->_cookie !== null && array_key_exists('token', $this->_cookie);
-  }
-
-  protected function _property($property, $default = null)
-  {
-    return isset($this->_cookie[$property]) ?
-      $this->_cookie[$property] : $default;
+    return 'FRTLGN';
   }
 
   public function getCustomerFid($default = null)
@@ -79,6 +54,11 @@ class LoginCookie
   public function isExpired()
   {
     return $this->getTokenExpiry() < time();
+  }
+
+  public function getSessionId()
+  {
+    return $this->_property('sessionId');
   }
 
   public function getAuthedIp()

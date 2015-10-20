@@ -1,0 +1,4 @@
+{
+  "token": "2FaverificationToken",
+  "verify": "md5: userFid + secret + token + sessionId"
+}

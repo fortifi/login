@@ -5,6 +5,7 @@
   "displayName": "John Smith",
   "userType": 1,
   "token": "0037SCRgGuX0D5CLlAIk5fwg7raV3xF3Sw97sYLr",
+  "sessionId": 123,
   "refresh": "0XWV6Xdw4EdNAgwZ8srJuLo7lo7Lz4l5qhsM1r7P",
   "expiry": "1444897254",
   "authIp": "127.0.0.1",
